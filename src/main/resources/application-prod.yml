@@ -1,0 +1,6 @@
+spring:
+  banner:
+    location: classpath:/banners/banner-prod.txt
+
+discord:
+  token: ${DISCORD_TOKEN}
