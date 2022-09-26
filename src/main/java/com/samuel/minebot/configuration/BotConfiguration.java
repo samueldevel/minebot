@@ -1,9 +1,9 @@
 package com.samuel.minebot.configuration;
 
+import com.samuel.minebot.exception.GatewayDiscordException;
 import com.samuel.minebot.token.DiscordToken;
 import discord4j.core.DiscordClientBuilder;
 import discord4j.core.GatewayDiscordClient;
-import discord4j.gateway.intent.IntentSet;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.context.annotation.Bean;
@@ -23,6 +23,8 @@ public class BotConfiguration {
                 .gateway()
                 .login()
                 .block();
+
+        if (gateway == null) throw new GatewayDiscordException("gateway nullable after login");
         log.info("client logged!");
 
         gateway.onDisconnect().block();
