@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.samuel</groupId>
     <artifactId>minebot</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>minebot</name>
     <description>MineBot created to play with my friends</description>
     <properties>
@@ -51,6 +51,18 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.samuel.minebot.MinebotApplication</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
