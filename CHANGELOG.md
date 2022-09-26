@@ -7,10 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- create restful application to catch Aternos info by selenium
+
+## [1.1.0] - 2022-09-26
+
+### Added
+
+- enable intent and create function to auto execute all commands available
+- create interface to handle all commands
+
 ## [1.0.0] - 2022-09-24
+
 ### Added
 
 - add log to info which token was got
 - add gateway null handler
-- remove -X parameter of the command
 - add exception to catch unexpected gateway error after login
+
+### Fixed
+
+- remove -X parameter of the command
